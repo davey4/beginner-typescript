@@ -14,10 +14,16 @@ const result = add(number1, number2);
 //   name: string;
 //   age: number;
 // }
-const person = {
+const person: {
+  name: string;
+  age: number;
+  hobbies: string[];
+  role: [number, string]; //tuple
+} = {
   name: "Max",
   age: 30,
   hobbies: ["Sports", "Cooking"],
+  role: [2, "author"],
 };
 
 // giving up all tsc benefits with any
@@ -26,6 +32,6 @@ favoriteActivities = ["Sports", 1];
 
 console.log(person);
 
-for (const hobby of person.hobbies) {
-  console.log(hobby.toUpperCase());
-}
+// for (const hobby of person.hobbies) {
+//   console.log(hobby.toUpperCase());
+// }
