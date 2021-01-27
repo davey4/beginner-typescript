@@ -40,7 +40,18 @@ var person = {
     hobbies: ["Sports", "Cooking"],
     role: Role.ADMIN,
 };
-console.log(person);
+// console.log(person);
 // for (const hobby of person.hobbies) {
 //   console.log(hobby.toUpperCase());
 // }
+// union types
+function combine(input1, input2) {
+    var result;
+    if (typeof input1 === "number" && typeof input2 === "number") {
+        result = input1 + input2;
+    }
+    else {
+        result = input1.toString() + input2.toString();
+    }
+    return result;
+}
