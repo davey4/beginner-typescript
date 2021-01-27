@@ -8,15 +8,24 @@ const number1 = 5;
 const number2 = 2.8;
 
 const result = add(number1, number2);
-console.log(result);
+// console.log(result);
 
 // const person: {
 //   name: string;
 //   age: number;
 // }
-const person: {} = {
+const person = {
   name: "Max",
   age: 30,
+  hobbies: ["Sports", "Cooking"],
 };
 
+// giving up all tsc benefits with any
+let favoriteActivities: any[];
+favoriteActivities = ["Sports", 1];
+
 console.log(person);
+
+for (const hobby of person.hobbies) {
+  console.log(hobby.toUpperCase());
+}
